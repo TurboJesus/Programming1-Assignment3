@@ -20,8 +20,7 @@ namespace Assignment_3
         static void Main(string[] args)
         {
             iMoney = 100;
-            qgsufyagef
-            
+        uoiashgvfasfguawsf         
         }
     }
 }
