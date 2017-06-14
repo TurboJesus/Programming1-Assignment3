@@ -20,8 +20,7 @@ namespace Assignment_3
         static void Main(string[] args)
         {
             iMoney = 100;
-        uoiashgvfasfguawsf 
-                // e9urjngidrumnidht        
+            Console.WriteLine("Hey hey wadda ya say?");
         }
     }
 }
