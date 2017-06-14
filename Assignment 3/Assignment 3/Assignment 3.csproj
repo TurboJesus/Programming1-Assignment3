@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Apple.cs" />
     <Compile Include="Corn.cs" />
+    <Compile Include="Dragon%27s Blood.cs" />
     <Compile Include="Plant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
