@@ -114,5 +114,13 @@ namespace Assignment_3
         {
             Produce = 0;
         }
+        public void Water()
+        {
+            m_iThirst--;
+        }
+        public void Fertilize()
+        {
+            m_iNutrition++;
+        }
     }
 }
