@@ -109,8 +109,8 @@ namespace Assignment_3
         {
             m_iProduce = m_iProduce + (1 * m_iGrowthRate);
         }
-
-        protected void Harvest()
+        //Quick change to see if my idea works, protected into public 
+        public void Harvest()
         {
             Produce = 0;
         }

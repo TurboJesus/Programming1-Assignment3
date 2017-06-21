@@ -28,16 +28,16 @@ namespace Assignment_3
             all. Line 51 is the while loop. Within that loop we have 
             the actions the player can take and how they do that. 
             Lines 62-69 is the string and the TryParse check.  
-            Lines 79-93 are the cases contained within the switch for the 
-            action select. When the player selects one of the actions the function 
-            is called and its effects take place.
+            So the player can select a plant from their various plants 
+            and then chose what to do with that specific plant a 
+            switch with a switch inside of it is being used. 
             */
 
             Console.WriteLine("Gardening Simulator 2017");
             Console.WriteLine("Brought to you by Ali, Dayton, & Rajan");
             Console.ReadLine();
 
-            Console.WriteLine("You have {0} to start with", iMoney);
+            Console.WriteLine("You have ${0} to start with", iMoney);
             Console.WriteLine("In Gardening Simulator 2017, you can buy plants, grow them, sell them, and more!");
             Console.ReadLine();
 
@@ -49,55 +49,174 @@ namespace Assignment_3
 
             Plant myPlant = new Plant();
 
-           while (true)
+            while (true)
             {
+
+                Console.WriteLine("Which plant would you like to do stuff to");
+                Console.WriteLine("1.Apple 2.Corn 3.Dragon's Blood 4. Rafflesia");
+                Console.ReadLine();
+                Console.WriteLine("Press 1, 2, 3, or 4");
+
+                string sPlantSelect = Console.ReadLine();
+                int iPlantSelect;
+                while (!int.TryParse(sPlantSelect, out iPlantSelect))
+                {
+                    Console.WriteLine("Try a number from 1-4");
+                    sPlantSelect = Console.ReadLine();
+                }
+
                 Console.WriteLine("Here are the actions you can take");
                 Console.WriteLine("1. Water 2. Grow 3. Fertilize 4. Harvest");
                 Console.ReadLine();
-                      
-                Console.WriteLine("What would you like to do to {0} in {1} ",sGardenName);
+
+                Console.WriteLine("What would you like to do to");
                 Console.WriteLine("Press 1, 2, 3, or 4");
                 Console.ReadLine();
 
                 string sActionSelect = Console.ReadLine();
                 int iActionSelect;
-                bool bActionSelectResult = int.TryParse(sActionSelect, out iActionSelect);
-                if (bActionSelectResult == false)
+                while (!int.TryParse(sActionSelect, out iActionSelect))
                 {
                     Console.WriteLine("Try number, maybe 1, 2, 3, or 4");
-                    Console.ReadLine();
                     sActionSelect = Console.ReadLine();
                 }
 
-                switch (iActionSelect)
-                    {
+                switch (iPlantSelect)
+                {
                     case 1:
-                        if (iActionSelect == 1)
+                        if (iPlantSelect == 1)
                         {
-                        myPlant.Water();
+                            //Actoin select switch goes here
+                            switch (iActionSelect)
+                            {
+                                case 1:
+                                    if (iActionSelect == 1)
+                                    {
+                                        myPlant.Water();
+                                    }
+                                    break;
+                                case 2:
+                                    if (iActionSelect == 2)
+                                    {
+                                        myPlant.Grow();
+                                    }
+                                    break;
+                                case 3:
+                                    if (iActionSelect == 3)
+                                    {
+                                        myPlant.Fertilize();
+                                    }
+                                    break;
+                                case 4:
+                                    if (iActionSelect == 4)
+                                    {
+                                        myPlant.Harvest();
+                                    }
+                                    break;
+                            }
                         }
                         break;
-                    case 2: 
-                        if (iActionSelect==2)
+                    case 2:
+                        if (iPlantSelect == 2)
                         {
-                            myPlant.Grow();
+                            //Action select swicth goes here
+                            switch (iActionSelect)
+                            {
+                                case 1:
+                                    if (iActionSelect == 1)
+                                    {
+                                        myPlant.Water();
+                                    }
+                                    break;
+                                case 2:
+                                    if (iActionSelect == 2)
+                                    {
+                                        myPlant.Grow();
+                                    }
+                                    break;
+                                case 3:
+                                    if (iActionSelect == 3)
+                                    {
+                                        myPlant.Fertilize();
+                                    }
+                                    break;
+                                case 4:
+                                    if (iActionSelect == 4)
+                                    {
+                                        myPlant.Harvest();
+                                    }
+                                    break;
+                            }
                         }
                         break;
                     case 3:
-                        if (iActionSelect==3)
+                        if (iPlantSelect == 3)
                         {
-                            myPlant.Fertilize();
+                            //action se;ect switch goes here
+                            switch (iActionSelect)
+                            {
+                                case 1:
+                                    if (iActionSelect == 1)
+                                    {
+                                        myPlant.Water();
+                                    }
+                                    break;
+                                case 2:
+                                    if (iActionSelect == 2)
+                                    {
+                                        myPlant.Grow();
+                                    }
+                                    break;
+                                case 3:
+                                    if (iActionSelect == 3)
+                                    {
+                                        myPlant.Fertilize();
+                                    }
+                                    break;
+                                case 4:
+                                    if (iActionSelect == 4)
+                                    {
+                                        myPlant.Harvest();
+                                    }
+                                    break;
+                            }
                         }
                         break;
                     case 4:
-                        if (iActionSelect==4)
+                        if (iPlantSelect == 4)
                         {
-                            myPlant.Harvest();
+                            //Acction select switch goes here
+                            switch (iActionSelect)
+                            {
+                                case 1:
+                                    if (iActionSelect == 1)
+                                    {
+                                        myPlant.Water();
+                                    }
+                                    break;
+                                case 2:
+                                    if (iActionSelect == 2)
+                                    {
+                                        myPlant.Grow();
+                                    }
+                                    break;
+                                case 3:
+                                    if (iActionSelect == 3)
+                                    {
+                                        myPlant.Fertilize();
+                                    }
+                                    break;
+                                case 4:
+                                    if (iActionSelect == 4)
+                                    {
+                                        myPlant.Harvest();
+                                    }
+                                    break;
+                            }
                         }
                         break;
-                    }
+                }  
             }
-    
         }
     }
-}
+    }
