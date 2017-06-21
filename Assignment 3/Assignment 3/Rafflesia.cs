@@ -10,7 +10,15 @@ namespace Assignment_3
     //It is the biggest flower in the world. So, it has the 
     //highest price between our products. 
 
-    class Rafflesia:Plant
+    class Rafflesia : Plant
     {
+        public Rafflesia()
+        {
+            {
+                Cost = 1000f;
+                SellRatio = 125f;
+            }
+
+        }
     }
 }
