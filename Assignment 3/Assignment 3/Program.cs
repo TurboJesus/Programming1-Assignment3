@@ -65,6 +65,7 @@ namespace Assignment_3
                 if (bActionSelectResult == false)
                 {
                     Console.WriteLine("Try number, maybe 1, 2, 3, or 4");
+                    Console.ReadLine();
                     sActionSelect = Console.ReadLine();
                 }
 
