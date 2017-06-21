@@ -86,7 +86,6 @@ namespace Assignment_3
                     case 1:
                         if (iPlantSelect == 1)
                         {
-                            //Actoin select switch goes here
                             switch (iActionSelect)
                             {
                                 case 1:
@@ -119,7 +118,6 @@ namespace Assignment_3
                     case 2:
                         if (iPlantSelect == 2)
                         {
-                            //Action select swicth goes here
                             switch (iActionSelect)
                             {
                                 case 1:
@@ -152,7 +150,6 @@ namespace Assignment_3
                     case 3:
                         if (iPlantSelect == 3)
                         {
-                            //action se;ect switch goes here
                             switch (iActionSelect)
                             {
                                 case 1:
@@ -185,7 +182,6 @@ namespace Assignment_3
                     case 4:
                         if (iPlantSelect == 4)
                         {
-                            //Acction select switch goes here
                             switch (iActionSelect)
                             {
                                 case 1:
