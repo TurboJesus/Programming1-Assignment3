@@ -17,7 +17,6 @@ namespace Assignment_3
             {
                 Cost = 500f;
                 SellRatio = 75f;
-
             }
  
         } 
