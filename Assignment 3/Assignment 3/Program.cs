@@ -25,9 +25,11 @@ namespace Assignment_3
             can expect from Gardening Simulator 2017. Lines 36-40 are for 
             creating the name of the garden. Line 43 is for creating the 
             object for this program, it is an object oriented program after 
-            all. Lines 47-XXX is the while loop. Within that loop we have 
-            the actions the player can take and how they do that. Lines 57-X
-            is the string and the TryParse check that wi
+            all. Lines 51 is the while loop. Within that loop we have 
+            the actions the player can take and how they do that. Lines 57-66
+            is the string and the TryParse check that. Lines 68-94 are the cases 
+            contained within the switch. When the player selects one of the actions
+            the function is called and and its effects take place.
             */
 
             Console.WriteLine("Gardening Simulator 2017");
@@ -65,8 +67,33 @@ namespace Assignment_3
                     sActionSelect = Console.ReadLine();
                 }
 
-
-
+                switch (iActionSelect)
+                    {
+                    case 1:
+                        if (iActionSelect == 1)
+                        {
+                        myPlant.Water();
+                        }
+                        break;
+                    case 2: 
+                        if (iActionSelect==2)
+                        {
+                            myPlant.Grow();
+                        }
+                        break;
+                    case 3:
+                        if (iActionSelect==3)
+                        {
+                            myPlant.Fertilize();
+                        }
+                        break;
+                    case 4:
+                        if (iActionSelect==4)
+                        {
+                            myPlant.Harvest();
+                        }
+                        break;
+                    }
             }
     
         }
