@@ -46,31 +46,15 @@ namespace Assignment_3
 
             Plant myPlant = new Plant();
 
+            // Calling functions to bet a number and amount of money.
+            int iPlantSelect = iPlantSelection();
+
+            // Calling functions to bet a number and amount of money.
+            int iActionSelect = iActionSelection();
+
             while (true)
             {
-
-                Console.WriteLine("\nWhich plant would you like to do stuff to?");
-                Console.WriteLine("1.Apple 2.Corn 3.Dragon's Blood 4. Rafflesia");
                 
-                string sPlantSelect = Console.ReadLine();
-                int iPlantSelect;
-                while (!int.TryParse(sPlantSelect, out iPlantSelect))
-                {
-                    Console.WriteLine("Try a number from 1-4");
-                    sPlantSelect = Console.ReadLine();
-                }
-
-                Console.WriteLine("\nHere are the actions you can take. What would you like to do to?");
-                Console.WriteLine("1. Water 2. Grow 3. Fertilize 4. Harvest");
-
-                string sActionSelect = Console.ReadLine();
-                int iActionSelect;
-                while (!int.TryParse(sActionSelect, out iActionSelect))
-                {
-                    Console.WriteLine("Try number, maybe 1, 2, 3, or 4");
-                    sActionSelect = Console.ReadLine();
-                }
-
                 switch (iPlantSelect)
                 {
                     case 1:
@@ -209,7 +193,6 @@ namespace Assignment_3
         {
             bool isGardenName = false;
             string sGardenName = "";
-            int iGardenName = 0;
             while (isGardenName == false)
             {
                 //Get the garden's name
@@ -231,6 +214,80 @@ namespace Assignment_3
 
             }
             return sGardenName;
+        }
+        // Read the user plant selection and convert it to integer. If it's not valid then ask again.
+        static int iPlantSelection()
+        {
+            int iPlantSelect = 0;
+            bool isPlantSelectionValid = false;
+            while (isPlantSelectionValid == false)
+            {
+                string[] sPlantSelections = new string[] {"0", "Apple", "Corn", "Dragon's Blood", "Rafflesia"};
+
+                // Get the user selection.
+                Console.WriteLine("\nWhich plant would you like to do stuff to?");
+                Console.WriteLine("1.Apple 2.Corn 3.Dragon's Blood 4. Rafflesia");
+                string sPlantSelection = Console.ReadLine();
+
+                // Get the user selection and convert it to integer.
+                if (int.TryParse(sPlantSelection, out iPlantSelect))
+                {
+                    // Check that the user selection is between 0 and 5.
+                    if (iPlantSelect > 0 && iPlantSelect < 5)
+                    {
+                        // Return the user selection if it's between 0 and 5.
+                        Console.WriteLine("\n>You selected \"{0}\"", sPlantSelections[iPlantSelect]);
+                        isPlantSelectionValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n>Try a number from 1 to 4");
+                    }
+                }
+                // If the user selection is not an integer.
+                else
+                {
+                    Console.WriteLine("\n>Try a number from the chart.");
+                }
+            }
+            return iPlantSelect;
+        }
+        // Get the user action and convert it to integer. If it's not valid then ask again.
+        static int iActionSelection()
+        {
+            int iActionSelect = 0;
+            bool isActionValid = false;
+            while (isActionValid == false)
+            {
+                string[] sActions = new string[] { "0", "Water", "Grow", "Fertilize", "Harvest" };
+
+                // Get the user action.
+                Console.WriteLine("\nHere are the actions you can take. What would you like to do to?");
+                Console.WriteLine("1. Water 2. Grow 3. Fertilize 4. Harvest");
+                string sAction = Console.ReadLine();
+
+                // Get the action and convert it to integer.
+                if (int.TryParse(sAction, out iActionSelect))
+                {
+                    // Check that the action is between 0 and 5.
+                    if (iActionSelect > 0 && iActionSelect < 5)
+                    {
+                        // Return the action if it's between 0 and 5.
+                        Console.WriteLine("\n>You selected \"{0}\"", sActions[iActionSelect]);
+                        isActionValid = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n>Try a number from 1 to 4");
+                    }
+                }
+                // If the action is not an integer.
+                else
+                {
+                    Console.WriteLine("\n>Try a number from 1 to 4");
+                }
+            }
+            return iActionSelect;
         }
     }
 }
