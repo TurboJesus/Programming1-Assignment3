@@ -41,11 +41,7 @@ namespace Assignment_3
             Console.WriteLine("In Gardening Simulator 2017, you can buy plants, grow them, sell them, and more!");
             Console.ReadLine();
 
-            Console.WriteLine("What would you like to name your garden?");
-            string sGardenName = Console.ReadLine();
-            Console.ReadLine();
-            Console.WriteLine("WOW, {0}, what a great name!", sGardenName);
-            Console.ReadLine();
+            string sGardenName = GetGardenName();
 
             Plant myPlant = new Plant();
 
@@ -211,8 +207,36 @@ namespace Assignment_3
                             }
                         }
                         break;
-                }  
+                }
             }
         }
+        // Get the Garden's name
+        static string GetGardenName()
+        {
+            bool isGardenName = false;
+            string sGardenName = "";
+            int iGardenName = 0;
+            while (isGardenName == false)
+            {
+                //Get the garden's name
+                Console.Write("What would you like to name your garden?");
+                sGardenName = Console.ReadLine();
+
+                //If player input is null
+                if (sGardenName == "")
+                {
+                    Console.WriteLine("\nPlease use valid charachters.");
+                }
+
+                //If player input is string
+                else
+                {
+                    Console.WriteLine("WOW, {0}, what a great name!", sGardenName);
+                    isGardenName = true;
+                }
+
+            }
+            return sGardenName;
+        }
     }
-    }
+}
