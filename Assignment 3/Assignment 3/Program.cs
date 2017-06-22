@@ -247,7 +247,7 @@ namespace Assignment_3
                 // If the user selection is not an integer.
                 else
                 {
-                    Console.WriteLine("\n>Try a number from the chart.");
+                    Console.WriteLine("\n>Try a number from 1 to 4");
                 }
             }
             return iPlantSelect;
