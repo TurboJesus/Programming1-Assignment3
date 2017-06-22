@@ -41,6 +41,7 @@ namespace Assignment_3
             Console.WriteLine("In Gardening Simulator 2017, you can buy plants, grow them, sell them, and more!");
             Console.ReadLine();
 
+            // Call the GetGardenName function
             string sGardenName = GetGardenName();
 
             Plant myPlant = new Plant();
@@ -48,11 +49,9 @@ namespace Assignment_3
             while (true)
             {
 
-                Console.WriteLine("Which plant would you like to do stuff to");
+                Console.WriteLine("\nWhich plant would you like to do stuff to?");
                 Console.WriteLine("1.Apple 2.Corn 3.Dragon's Blood 4. Rafflesia");
-                Console.ReadLine();
-                Console.WriteLine("Press 1, 2, 3, or 4");
-
+                
                 string sPlantSelect = Console.ReadLine();
                 int iPlantSelect;
                 while (!int.TryParse(sPlantSelect, out iPlantSelect))
@@ -61,13 +60,8 @@ namespace Assignment_3
                     sPlantSelect = Console.ReadLine();
                 }
 
-                Console.WriteLine("Here are the actions you can take");
+                Console.WriteLine("\nHere are the actions you can take. What would you like to do to?");
                 Console.WriteLine("1. Water 2. Grow 3. Fertilize 4. Harvest");
-                Console.ReadLine();
-
-                Console.WriteLine("What would you like to do to");
-                Console.WriteLine("Press 1, 2, 3, or 4");
-                Console.ReadLine();
 
                 string sActionSelect = Console.ReadLine();
                 int iActionSelect;
